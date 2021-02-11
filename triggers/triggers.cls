@@ -24,11 +24,11 @@ trigger AccountTrigger on Account (after insert){
 //different trigger: after trigger
 trigger AddContactToAccountTrigger on Account (after insert){
     List<Contact> contacts = new List<Contact>(); //gets around 150 govenor limit (common with data imports)
-    for (Account acct: Trigger.new) {
+    for (Account acct : Trigger.new) {
         Contact c = new Contact();
         c.FirstName = 'Hello';
         c.LastName = 'World';
-        c.AccountId = acct.id //wouldn't have access to account id with a before statement
+        c.AccountId = acct.id; //wouldn't have access to account id with a before statement
         contacts.add(c);
     }
     insert contacts
