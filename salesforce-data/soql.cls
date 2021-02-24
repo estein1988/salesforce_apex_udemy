@@ -38,7 +38,7 @@ Id accountId = '0016g00000DSWXzAAP'
 
 Account acct = [
     SELECT 	Id,
-    		FORMAT(AnnualRevenue),
+    	    FORMAT(AnnualRevenue),
     		Name,
     		NumberOfEmployees 
     FROM 	Account 
